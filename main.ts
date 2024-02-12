@@ -15,6 +15,8 @@ function solution(B: string[]): number[] {
       markVisited(grid, x, y);
       getConnectedCells(grid, x + 1, y);
       getConnectedCells(grid, x, y + 1);
+      getConnectedCells(grid, x - 1, y);
+      getConnectedCells(grid, x, y - 1);
     }
   };
 
@@ -32,5 +34,10 @@ function solution(B: string[]): number[] {
 }
 
 console.log(
-  solution(["#.....", "#..#..", "....##", "##....", "..##..", "....##"])
+  solution(["#.....", 
+            "#..#..", 
+            "#...##", 
+            ".#....", 
+            "..##..", 
+            "....##"])
 );
